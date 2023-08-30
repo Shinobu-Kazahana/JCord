@@ -19,7 +19,7 @@ const SetupPage = async() => {
     if (server){
         return redirect(`/server/${server.id}`)
     }
-
+//create server if there is no server associated with the currently signed in user
     return ( <InitialModal></InitialModal> );
 }
  

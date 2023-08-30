@@ -5,7 +5,8 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FileUpload from "@/components/file-upload";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
+import { useRouter } from "next/navigation";
 import {
   Dialog,
   DialogContent,
@@ -13,6 +14,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+  DialogTrigger
 } from "@/components/ui/dialog";
 import {
   Form,
@@ -36,6 +38,7 @@ const formSchema = z.object({
 });
 
 export const InitialModal = () => {
+  const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -52,7 +55,17 @@ export const InitialModal = () => {
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      await axios.post("/api/servers", values);
+      form.reset
+      router.refresh()
+      window.location.reload()
+      
+     
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   if (!isMounted) {
@@ -70,10 +83,11 @@ export const InitialModal = () => {
   }
   return (
     <Dialog open>
+         {/* <DialogTrigger>Open</DialogTrigger> */}
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl font-bold text-center">
-            Welcome JCord, Please Create Your Server
+            Welcome To JCord, Please Create Your Server
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
             Please create your server. Unless you are JR. You can always change
