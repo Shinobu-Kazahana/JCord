@@ -32,8 +32,8 @@ const formSchema = z.object({
   name: z
     .string()
     .min(1, { message: "Enter a server name you loser" })
-    .max(100, {
-      message: "Server name must be less than 100 characters you loser",
+    .max(20, {
+      message: "Server name must be less than 20 characters you loser",
     }),
   imageUrl: z.string().min(1, { message: "Server image is required" }),
 });
