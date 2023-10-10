@@ -13,7 +13,21 @@ const nextConfig = {
         "uploadthing.com",
         "utfs.io"
       ]
+    },
+    headers: async () => {
+      return [
+        {
+          source: '/(.*)',
+          headers: [
+            {
+              key: 'Content-Security-Policy',
+              value: 'frame-ancestors "self" https://sandbox.procore.com/',
+            },
+          ],
+        },
+      ];
     }
-  }
+  },
+  
   
   module.exports = nextConfig
