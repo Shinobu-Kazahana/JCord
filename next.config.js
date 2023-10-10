@@ -21,7 +21,7 @@ const nextConfig = {
           headers: [
             {
               key: 'Content-Security-Policy',
-              value: 'frame-ancestors "self" https://sandbox.procore.com/',
+              value: 'frame-ancestors https://sandbox.procore.com/',
             },
           ],
         },
