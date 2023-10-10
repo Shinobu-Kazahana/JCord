@@ -21,7 +21,11 @@ const nextConfig = {
           headers: [
             {
               key: 'Content-Security-Policy',
-              value: 'frame-ancestors https://sandbox.procore.com/',
+              value: 'frame-ancestors https://sandbox.procore.com',
+            },
+            {
+              key: 'X-Frame-Options',
+              value: 'ALLOW-FROM https://sandbox.procore.com', // Replace with your iframe domain
             },
           ],
         },
