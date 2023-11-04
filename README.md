@@ -13,7 +13,7 @@ pnpm dev
 ```
 
 
-(https://github.com/Shinobu-Kazahana/JCord/blob/main/1.png)
+![Image 1](./1.png)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
