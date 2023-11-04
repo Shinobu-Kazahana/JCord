@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -21,5 +19,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 
 ## What Is This
-This is a simple Discord Clone Application built using Next 13, React, Tailwind, Prisma, PlanetScale, Clerk, Typescript, and 
-Socket.IO
+This is a  Discord Clone Application built using Next 13, React, Tailwind, Prisma, PlanetScale, Clerk, Typescript, and 
+Socket.IO. It supports live messages updates, creating servers, adding users to servers, search, as well as creating channels.
+
+![Image 1](./1.png)
+![Image 1](./2.png)
+![Image 1](./3.png)
+![Image 1](./4.png)
+![Image 1](./5.png)
+![Image 1](./6.png)
